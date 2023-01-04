@@ -1,17 +1,40 @@
-import React from 'react';
+/*!
+ * =========================================================
+ *          Nolimits  *
+ * =========================================================
+ * Copyright (c) 2023
+ * @Author: Serhii Burdeinyi
+ * @email: tibtus@gmail.com
+ * Licensed under the MIT License (MIT)
+ */
 
-/*import logo from './image/logo/bc_logo.svg';*/
-import './App.css';
+import React from "react";
 
-function App() {
+import { BrowserRouter } from "react-router-dom";
+/*import {createBrowserHistory} from "history";*/
+
+import RouterApp from "./Router/Router.js"
+/*import {Storage} from "./context/storage-context";*/
+
+/*
+const history = createBrowserHistory();
+*/
+
+function App(props) {
+
+  /*const [storage, setStorage] = Storage.useReducer();*/
+
   return (
-    <div className="App">
-      <header className="App-header">
-          {/*<img src={logo} className="App-logo" alt="logo" />*/}
-          Serhii Burdeinyi
-      </header>
-    </div>
+      /*<Storage.Context.Provider value={{storage, setStorage}}>*/
+
+        <BrowserRouter>
+            <RouterApp/>
+        </BrowserRouter>
+
+      /*</Storage.Context.Provider>*/
   );
 }
+
+
 
 export default App;
